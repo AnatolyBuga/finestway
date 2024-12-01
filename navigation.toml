@@ -2,7 +2,7 @@
 name = "About"
 path = "#about"
 [[item]]
-name = "Projects"
+name = "Destinations"
 path = "#projects"
 [[item]]
 name = "Contact"

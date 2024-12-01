@@ -8,9 +8,9 @@ compile_sass = false
 build_search_index = false
 
 # The site title and description; used in feeds by default.
-title = "Zola Grayscale"
-description = "A port of the Start Bootrap Grayscale theme, for Zola."
-author = "Your Website"
+title = "Finest Way"
+description = "Luxury Travel Concierge"
+author = "Anatoly Bugakov"
 
 [markdown]
 # Whether to do syntax highlighting

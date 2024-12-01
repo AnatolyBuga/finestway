@@ -58,7 +58,7 @@
                 <div class="text-center">
                     <h1 class="mx-auto my-0 text-uppercase">{% block masthead_title %}{{ config.title }}{% endblock masthead_title %}</h1>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5">{% block masthead_description %}{{ config.description }}{% endblock masthead_description %}</h2>
-                    {% block masthead_button %}<a class="btn btn-primary" href="{% block masthead_button_url %}#about{% endblock masthead_button_url %}" id="{% block masthead_button_id %}getstarted{% endblock masthead_button_id %}">{% block masthead_button_label %}Get Started{% endblock masthead_button_label %}</a>{% endblock masthead_button %}
+                    {% block masthead_button %}<a class="btn btn-primary" href="{% block masthead_button_url %}#about{% endblock masthead_button_url %}" id="{% block masthead_button_id %}getstarted{% endblock masthead_button_id %}">{% block masthead_button_label %}Explore{% endblock masthead_button_label %}</a>{% endblock masthead_button %}
                 </div>
             </div>
         </div>
@@ -71,18 +71,18 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8">
-                    <h2 class="text-white mb-4">{% block about_title %}Built with Bootstrap 5{% endblock about_title %}</h2>
+                    <h2 class="text-white mb-4">{% block about_title %}<b>Unique Experience</b>{% endblock about_title %}</h2>
                     <p class="text-white-50">
                         {% block about_description %}
-                            {{ config.title }} is a free port Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the theme into your Zola themes from
-                            <a href="https://startbootstrap.com/theme/grayscale/">GitHub.</a>
-                            The theme is open source, and you can use it for any purpose, personal or commercial.
+                            {{ config.title }} is a worldwide private travel and lifestyle atelier. For over two decades our team delivered unforgettable experiences for individuals and families around the globe. We build long term relationship based on trust, professionalism, detail and privacy.
+                            <!-- <a href="https://startbootstrap.com/theme/grayscale/">GitHub.</a> -->
+                            <!-- The theme is open source, and you can use it for any purpose, personal or commercial. -->
                         {% endblock about_description %}
                     </p>
                 </div>
             </div>
             {% block about_image %}
-            <img class="img-fluid" src="{{ get_url(path="assets/img/ipad.png") }}" alt="..." />
+            <img class="img-fluid" src="{{ get_url(path="assets/img/mldvs.heic") }}" alt="..." />
             {% endblock about_image %}
         </div>
     </section>
@@ -96,17 +96,16 @@
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                 <div class="col-xl-8 col-lg-7">
                     {% block feature_project_thumbnail %}
-                    <img class="img-fluid mb-3 mb-lg-0" src="{{ get_url(path="assets/img/bg-masthead.jpg") }}" alt="...">
+                    <img class="img-fluid mb-3 mb-lg-0" src="{{ get_url(path="assets/img/ski2.jpg") }}" alt="...">
                     {% endblock feature_project_thumbnail %}
                 </div>
                 <div class="col-xl-4 col-lg-5">
                     {% block feature_project_content %}
                     <div class="featured-text text-center text-lg-left">
-                        <h4>{% block feature_project_title %}Shoreline{% endblock feature_project_title %}</h4>
+                        <h4>{% block feature_project_title %}Limitless{% endblock feature_project_title %}</h4>
                         <p class="text-black-50 mb-0">
                         {% block feature_project_description %}
-                        {{ config.title }} is open source and MIT licensed. This means you can use it for any project
-                        - even commercial projects! Download it, customize it, and publish your website!
+                        With a network of partners across all 7 continents, our team will organize holidays, relocations and events fit to your family's personal tastes and preference. We operate 24/7 to meet high expectations of our clients.
                         {% endblock feature_project_description %}
                         </p>
                     </div>
@@ -127,10 +126,10 @@
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-white">{% block project_1_title %}Misty{% endblock project_1_title %}</h4>
+                                <h4 class="text-white">{% block project_1_title %}Europe{% endblock project_1_title %}</h4>
                                 <p class="mb-0 text-white-50">
                                 {% block project_1_description %}
-                                An example of where you can put an image of a project, or anything else, along with a description.
+                                Offers unique blend of luxury life, quality services, magnificent nature and timeless historical sites. Our client get access to the best Alpine chalets, private yachts and clubs, tour guides and much more... 
                                 {% endblock project_1_description %}
                                 </p>
                             </div>
@@ -153,10 +152,10 @@
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-right">
-                                <h4 class="text-white">{% block project_2_title %}Mountains{% endblock project_2_title %}</h4>
+                                <h4 class="text-white">{% block project_2_title %}Asia{% endblock project_2_title %}</h4>
                                 <p class="mb-0 text-white-50">
                                 {% block project_2_description %}
-                                Another example of a project with its respective description. These sections work well responsively as well!
+                                Whether you long a private island on the Maldives or a spiritual audience with Dalai Lama in his residence in Dharamshala or a deep dive into vibrant Japanese culture - we make it real.
                                 {% endblock project_2_description %}
                             </div>
                         </div>
