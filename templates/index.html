@@ -74,7 +74,7 @@
                     <h2 class="text-white mb-4">{% block about_title %}<b>Unique Experience</b>{% endblock about_title %}</h2>
                     <p class="text-white-50">
                         {% block about_description %}
-                            {{ config.title }} is a worldwide private travel and lifestyle atelier. For over two decades our team delivered unforgettable experiences for individuals and families around the globe. We build long term relationship based on trust, professionalism, detail and privacy.
+                            {{ config.title }} is a worldwide private travel and lifestyle atelier. For 20+ years our team delivered unforgettable experiences for individuals and families around the globe. We build long term relationship based on trust, professionalism, detail and privacy.
                             <!-- <a href="https://startbootstrap.com/theme/grayscale/">GitHub.</a> -->
                             <!-- The theme is open source, and you can use it for any purpose, personal or commercial. -->
                         {% endblock about_description %}
@@ -105,7 +105,7 @@
                         <h4>{% block feature_project_title %}Limitless{% endblock feature_project_title %}</h4>
                         <p class="text-black-50 mb-0">
                         {% block feature_project_description %}
-                        With a network of partners across all 7 continents, our team will organize holidays, relocations and events fit to your family's personal tastes and preference. We operate 24/7 to meet high expectations of our clients.
+                        With a network of partners across all 7 continents, our team will organize business trips, holidays, relocations and events fit to your family's personal tastes and preference. We operate 24/7 to meet high expectations of our clients.
                         {% endblock feature_project_description %}
                         </p>
                     </div>
@@ -118,7 +118,7 @@
             <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                 <div class="col-lg-6">
                     {% block project_1_thumbnail %}
-                    <img class="img-fluid" src="{{ get_url(path="assets/img/demo-image-01.jpg") }}" alt="...">
+                    <img class="img-fluid" src="{{ get_url(path="assets/img/como_short.jpg") }}" alt="...">
                     {% endblock project_1_thumbnail %}
                 </div>
                 <div class="col-lg-6">
@@ -129,7 +129,7 @@
                                 <h4 class="text-white">{% block project_1_title %}Europe{% endblock project_1_title %}</h4>
                                 <p class="mb-0 text-white-50">
                                 {% block project_1_description %}
-                                Offers unique blend of luxury life, quality services, magnificent nature and timeless historical sites. Our client get access to the best Alpine chalets, private yachts and clubs, tour guides and much more... 
+                                Our clients have access to the best Alpine chalets, exclusive hotels, private jets, yachts, clubs and tour guides.
                                 {% endblock project_1_description %}
                                 </p>
                             </div>
@@ -144,7 +144,7 @@
             <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                 <div class="col-lg-6">
                     {% block project_2_thumbnail %}
-                    <img class="img-fluid" src="{{ get_url(path="assets/img/demo-image-02.jpg") }}" alt="...">
+                    <img class="img-fluid" src="{{ get_url(path="assets/img/asia3.jpg") }}" alt="...">
                     {% endblock project_2_thumbnail %}
                 </div>
                 <div class="col-lg-6 order-lg-first">
@@ -155,15 +155,49 @@
                                 <h4 class="text-white">{% block project_2_title %}Asia{% endblock project_2_title %}</h4>
                                 <p class="mb-0 text-white-50">
                                 {% block project_2_description %}
-                                Whether you long a private island on the Maldives or a spiritual audience with Dalai Lama in his residence in Dharamshala or a deep dive into vibrant Japanese culture - we make it real.
+                                Whether it’s a seamless business trip to the Middle East, an exclusive escape to a private island in the Maldives, a spiritual audience with the Dalai Lama at his Dharamshala residence, or an immersive dive into Japan’s vibrant culture. We make it real.
                                 {% endblock project_2_description %}
                             </div>
                         </div>
                     </div>
                     {% endblock project_2_content %}
+                    
                 </div>
             </div>
             {% endblock project_2 %}
+
+
+            {% block project_3 %}
+            <!-- Project One Row -->
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="col-lg-6">
+                    {% block project_3_thumbnail %}
+                    <img class="img-fluid" src="{{ get_url(path="assets/img/como_short.jpg") }}" alt="...">
+                    {% endblock project_3_thumbnail %}
+                </div>
+                <div class="col-lg-6">
+                    {% block project_3_content %}
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">{% block project_3_title %}Americas, Africa, Australia,  <br>
+                                    and yes even Antarctica {% endblock project_3_title %}</h4>
+                                <p class="mb-0 text-white-50">
+                                {% block project_3_description %}
+                                All around the globe we work exclusively with trusted partners to guaranty the very top quality of services while our clients enjoy luxury life, remarkable nature and timeless historical sites. 
+                                {% endblock project_3_description %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endblock project_3_content %}
+                </div>
+            </div>
+            {% endblock project_3 %}
+
+
+
+
             {% block extra_projects %}{% endblock extra_projects %}
         </div>
     </section>
@@ -174,10 +208,28 @@
     <section class="signup-section" id="{% block signup_id%}signup{% endblock signup_id %}">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
-                <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+                {% for item in contact.contact %}
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas {{ item.icon }} text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">{{ item.name }}</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">{{ item.address|safe }}</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+
+                <!-- <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <i class="fa-regular {% block signup_icon %}fa-paper-plane{% endblock signup_icon %} fa-2x mb-2 text-white"></i>
-                    <h2 class="text-white mb-5">{% block signup_title %}Subscribe to receive updates!{% endblock signup_title %}</h2>
-                    {% block signup_form %}
+                    <h2 class="text-white mb-5">{% block signup_title %} 
+                        {% endblock signup_title %}</h2>
+                    {% block signup_form %} -->
+
                     <!-- * * * * * * * * * * * * * * *-->
                     <!-- * * SB Forms Contact Form * *-->
                     <!-- * * * * * * * * * * * * * * *-->
@@ -185,14 +237,20 @@
                     <!-- To make this form functional, sign up at-->
                     <!-- https://startbootstrap.com/solution/contact-forms-->
                     <!-- to get an API token!-->
+                     
                     <form class="form-signup" id="contactForm" data-sb-form-api-token="{{ config.extra.sb_forms_api_token | default(value="API_TOKEN") }}">
                         <!-- Email address input-->
+
+                        <!--
                         <div class="row input-group-newsletter">
                             <div class="col"><input class="form-control is-invalid" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" data-sb-can-submit="no"></div>
                             <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
                         </div>
                         <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
                         <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
+                        -->
+                        
+                        
                         <!-- Submit success message-->
                         <!---->
                         <!-- This is what your users will see when the form-->
@@ -211,15 +269,19 @@
                         <!-- an error submitting the form-->
                         <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
                     </form>
+                        
                     {% endblock signup_form %}
                 </div>
             </div>
         </div>
     </section>
     {% endblock signup %}
+
+
+
     {% block contact %}
     <!-- Contact -->
-    <section class="contact-section bg-black" id="{% block contact_id %}contact{% endblock contact_id %}">
+    <!-- <section class="contact-section bg-black" id="{% block contact_id %}contact{% endblock contact_id %}">
         <div class="container px-4 px-lg-5">
             {% block contact_contact %}
             <div class="row gx-4 gx-lg-5">
@@ -246,11 +308,14 @@
             {% endblock contact_social %}
         </div>
     </section>
-    {% endblock contact %}
+    {% endblock contact %} -->
+
+
+
     {% block footer %}
     <!-- Footer -->
     <footer class="footer bg-black small text-center text-white-50">
-        <div class="container px-4 px-lg-5">{% block footer_copyright %}Copyright &copy; {{ config.author }} {{ now() | date(format="%Y") }}{% endblock footer_copyright %}</div>
+        <div class="container px-4 px-lg-5">{% block footer_copyright %}Copyright &copy; Finest Way Ltd {{ now() | date(format="%Y") }}{% endblock footer_copyright %}</div>
         {% block extra_footer %}{% endblock extra_footer %}
         {% block footer_debug %}{{ debug::debug(context=__tera_context, name="__tera_context") }}{% endblock footer_debug %}
     </footer>

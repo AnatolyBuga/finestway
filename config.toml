@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://mattimustang.github.io/zola-grayscale/"
+base_url = "https://finestway.uk/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
@@ -27,4 +27,4 @@ debug = false
 
 # SB Forms API token
 # comment this out to remove the contact form
-sb_forms_api_token = "API_TOKEN"
+# sb_forms_api_token = "API_TOKEN"
