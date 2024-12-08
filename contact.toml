@@ -1,15 +1,15 @@
 [[contact]]
-name = "Address"
-address = "Queens Gardens, London, UK"
-icon = "fa-map-marked-alt"
+name = "Phone"
+address = "+44 7494 249399"
+icon = "fa-mobile-alt"
 [[contact]]
 name = "Email"
 address = """<a href="#!">v.bugakova@finestway.uk</a>"""
 icon = "fa-envelope"
 [[contact]]
-name = "Phone"
-address = "+44 7494 249399"
-icon = "fa-mobile-alt"
+name = "Address"
+address = "Queens Gardens, London, UK"
+icon = "fa-map-marked-alt"
 [[social]]
 icon = "fa-mastodon"
 url = "#!"
