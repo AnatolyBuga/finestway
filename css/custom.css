@@ -1,0 +1,70 @@
+/*
+ * Site customizations layered on top of the vendored theme (styles.css).
+ *
+ * Masthead video background
+ * -------------------------
+ * The masthead photo (bg-masthead.jpg) is replaced by a looping video
+ * (cloud_loop.mp4 is a "boomerang": the clip forwards then reversed, so it
+ * loops perfectly with no break). The photo is kept as the <video poster> so it
+ * shows instantly while the video loads and as a fallback if the browser can't
+ * play it. The dark gradient that used to live on .masthead's background is
+ * moved to .masthead-overlay so it sits ON TOP of the video and keeps the
+ * headline readable.
+ */
+
+.masthead {
+    position: relative;
+    overflow: hidden;
+}
+
+/* The looping video, sized to cover the masthead behind everything else. */
+.masthead-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Dark gradient over the video for text legibility (matches the theme's
+   original masthead gradient). */
+.masthead-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.7) 75%,
+            #000 100%);
+}
+
+/* Keep the headline/button above the video and overlay. */
+.masthead .container {
+    position: relative;
+    z-index: 2;
+}
+
+/*
+ * About -> Destinations transition
+ * --------------------------------
+ * The About section's dark background used to end at near-black and butt
+ * straight up against the light "Destinations" section, leaving a hard
+ * black/white line. Fade the bottom of the About background into the same light
+ * colour (#f8f9fa = Bootstrap's .bg-light) so the dark blends smoothly into the
+ * white instead. The top stays black to keep the heading text readable and to
+ * meet the dark bottom of the masthead seamlessly.
+ */
+.about-section {
+    background: linear-gradient(to bottom,
+            #000 0%,
+            #000 40%,
+            #f8f9fa 100%);
+}
